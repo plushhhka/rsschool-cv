@@ -1,5 +1,6 @@
-#Rakitina Polina
 ![My Photo](photo.jpg "My Photo")
+
+#Rakitina Polina
 
 ##Contact Information
 
