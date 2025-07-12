@@ -1,4 +1,5 @@
 #Rakitina Polina
+![My Photo](photo.jpg "My Photo")
 
 ##Contact Information
 
@@ -26,11 +27,14 @@ Passionate about mastering HTML, CSS, and JavaScript to build user-friendly appl
 ##*Code Examples*
 
 // Codewars: Mult8iply
+
 function multiply(a, b) {
+
   return a * b;
+
 }
 
-##**Experience*
+##*Experience*
 
 Markdown & Git Task (RS School, 2025)
 
@@ -38,7 +42,7 @@ Created a CV using Markdown and deployed it on GitHub Pages.
 
 Skills: Markdown, Git, GitHub
 
-##**Education*
+##*Education*
 
 RS School, JavaScript/Front-end Course, 2025 (in progress)
 
