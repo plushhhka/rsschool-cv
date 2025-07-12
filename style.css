@@ -1,0 +1,115 @@
+*{
+    box-sizing:border-box
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+html {
+    scroll-behavior: smooth;
+}
+.nav-list {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.nav-item {
+    margin-left: 20px;
+}
+.nav-link {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+}
+.nav-link:hover {
+    color: #007bff;
+}
+.main-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+.section {
+    width: 50%;
+    padding: 20px;
+}
+@media (max-width: 768px) {
+    .section {
+        width: 100%;
+    }
+}
+.section-title {
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #007bff;
+}
+.section-list {
+    list-style: none;
+    padding: 0;
+}
+.section-item {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+.section-item::before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    background-color: #007bff;
+    border-radius: 50%;
+}
+.section-item a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+}
+.section-item a:hover {
+    color: #007bff;
+}
+.profile-photo {
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+}
+.footer {
+    background-color: #f8f8f8;
+    padding: 20px 0;
+    text-align: center;
+}
+.footer a, .footer span {
+    margin: 0 10px;
+    color: #333;
+    text-decoration: none;
+}
+.rss-logo img {
+    width: 80px;
+    height: auto;
+    vertical-align: middle;
+}
+pre {
+    background-color: #f8f8f8;
+    padding: 15px;
+    border-radius: 5px;
+    font-family: 'Courier New', monospace;
+}
