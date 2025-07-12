@@ -1,16 +1,16 @@
 #Rakitina Polina
 ##Contact Information
-*Email: rakoukenn@gmail.com
-*GitHub: plushhhka
-*Discord: plushhhka
+-Email: rakoukenn@gmail.com
+-GitHub: plushhhka
+-Discord: plushhhka
 ##*About Me*
 *********
 A motivated beginner in web development, eager to learn and apply skills in real-world projects. Passionate about mastering HTML, CSS, and JavaScript to build user-friendly applications.
 ##*Skills*
-*HTML
-*CSS
-*Git & GitHub
-*Markdown
+-HTML
+-CSS
+-Git & GitHub
+-Markdown
 ##*Code Examples*
 // Codewars: Mult8iply
 function multiply(a, b) {
