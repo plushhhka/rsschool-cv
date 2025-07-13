@@ -2,7 +2,7 @@
     box-sizing:border-box
 }
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Viaoda Libre", serif;
     font-size: 18px;
     font-weight: 400;
     line-height: 1.5;
@@ -13,103 +13,178 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background-color: #d29e9a;
+    overflow-x: hidden; /* Запрещаем горизонтальный скролл */
+    min-width: 320px; 
 }
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+main .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
 }
-html {
-    scroll-behavior: smooth;
+a{
+    color: inherit;
+    text-decoration: underline;
+}
+a:hover{
+    text-decoration: none;
 }
 .nav-list {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+    display: flex; 
+    flex-wrap: wrap;             
+    list-style: none;           
+    padding: 0;                 
+    margin: 0;                 
+    gap: 0;                     
+    align-items: center;        
 }
+
 .nav-item {
-    margin-left: 20px;
+    position: relative;         
+    padding: 0 16px;            
 }
-.nav-link {
-    text-decoration: none;
-    color: #333;
-    transition: color 0.3s;
-}
-.nav-link:hover {
-    color: #007bff;
-}
-.main-container {
-    display: flex;
-    flex-wrap: wrap;
-}
-.section {
-    width: 50%;
-    padding: 20px;
-}
+
 @media (max-width: 768px) {
-    .section {
-        width: 100%;
+    .nav-item {
+        padding: 8px 10px; /* Уменьшаем отступы */
     }
 }
-.section-title {
-    font-size: 20px;
-    font-weight: 700;
-    text-transform: uppercase;
-    color: #007bff;
+
+.nav-link{
+    color:#e3dc94;
 }
-.section-list {
-    list-style: none;
-    padding: 0;
+
+.container {
+    max-width: 1200px;          
+    margin: 0 auto;             
+    padding: 0 15px;           
 }
-.section-item {
+
+.header {
     position: relative;
-    padding-left: 20px;
-    margin-bottom: 10px;
+    padding: 20px 0;            
+    background-color: #d29e9a;  
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
 }
-.section-item::before {
-    content: "";
-    position: absolute;
-    top: 8px;
-    left: 0;
-    width: 8px;
-    height: 8px;
-    background-color: #007bff;
-    border-radius: 50%;
+.footer{
+    display: flex;              
+    list-style: none;           
+    padding: 0;                 
+    margin: 0;                 
+    gap: 0;                     
+    align-items: center;   
 }
-.section-item a {
-    text-decoration: none;
-    color: #333;
-    transition: color 0.3s;
+.footer .container {
+
+    display: grid;
+    repeat(auto-fit, minmax(200px, 1fr));
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    text-align: center;            
 }
-.section-item a:hover {
-    color: #007bff;
+.footer a{
+    color:#e3dc94;
 }
+.footer span{
+    color:#e3dc94;
+}
+.footer .rss-logo img {
+    height: 24px;           
+    width: auto;           
+}
+.section {
+    word-wrap: break-word;
+    background-color: #e3dc94; 
+    border-radius: 12px;      
+    padding: 20px;           
+    margin-bottom: 20px;     
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+}
+
+.section#profile {
+    grid-column: 1 / -1; /* Занимает всю ширину */
+    min-height: 300px; 
+    display: flex;
+    flex-direction: column;
+    gap: 0 px;
+}
+.section-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 колонки */
+    gap: 20px;
+}
+.section:not(#profile) {
+    min-height: 200px;
+    padding: 20px;
+}
+.profile-content {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
 .profile-photo {
     width: 150px;
-    height: auto;
+    height: 150px;
     border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    flex-shrink: 0; 
 }
-.footer {
-    background-color: #f8f8f8;
-    padding: 20px 0;
-    text-align: center;
-}
-.footer a, .footer span {
-    margin: 0 10px;
-    color: #333;
-    text-decoration: none;
-}
-.rss-logo img {
-    width: 80px;
+img {
+    max-width: 100%;
     height: auto;
-    vertical-align: middle;
 }
-pre {
-    background-color: #f8f8f8;
-    padding: 15px;
-    border-radius: 5px;
-    font-family: 'Courier New', monospace;
+.profile-text {
+    flex: 1;
 }
+
+@media (max-width: 768px) {
+    .profile-content {
+    flex-direction: column;
+    align-items: center;
+    }
+    
+    .profile-text {
+    text-align: center;
+    }
+}
+main .container {
+    display: grid;
+    grid-template-columns: 1; 
+    gap: 20px; 
+    margin-top: 30px; 
+}
+
+.section:not(#profile) {
+    background-color: #e3dc94;
+    border-radius: 12px;
+    padding: 20px;
+    min-height: 200px; 
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 768px) {
+    main .container {
+    grid-template-columns: 1fr; 
+    }
+    
+    .section:not(#profile) {
+    min-height: auto;
+    }
+}
+.section pre {
+    margin: 0;
+    background-color: #d29e9a;
+    border-radius: 8px;
+    text-align: left; 
+    padding: 8px;
+    flex-grow: 1;
+}
+html {
+  scroll-behavior: smooth; /* Включает плавную прокрутку */
+}
+
